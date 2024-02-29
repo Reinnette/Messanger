@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ye6un87l22ac"]
+
+[ext_resource type="Script" path="res://Message/Messanger.gd" id="1_gtqvi"]
+[ext_resource type="Script" path="res://Connect.gd" id="2_oneh0"]
+[ext_resource type="Script" path="res://Call.gd" id="3_wj2u5"]
+
+[node name="Default" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_gtqvi")
+
+[node name="Node2" type="Node" parent="."]
+script = ExtResource("2_oneh0")
+
+[node name="Node3" type="Node" parent="."]
+script = ExtResource("2_oneh0")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 489.0
+offset_bottom = 389.0
+script = ExtResource("3_wj2u5")
+
+[connection signal="pressed" from="Button" to="Button" method="pressed"]
